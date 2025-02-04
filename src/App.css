@@ -1,7 +1,21 @@
-.App {
-  text-align: center;
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(198, 208, 208);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
+/* App container */
+.App {
+  text-align: center;
+  width: 100%;
+}
+
+/* Logo animation */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -13,21 +27,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -37,40 +36,130 @@
   }
 }
 
-form{
-  width: 1170px;
-  margin: auto;
+/* Header section */
+.App-header {
+  background-color: rgba(0, 0, 0, 0.85);
+  min-height: 100vh;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 20px;
 }
-form input{
+
+/* Card container */
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Title */
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Form styling */
+form {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+form input {
   height: 40px;
-  flex-basis: 80%;
+  flex-basis: 70%;
+  border: 2px solid #00bcd4;
+  border-radius: 5px;
+  padding: 10px;
+  outline: none;
+  font-size: 16px;
 }
-form  button{
-  flex-basis: 20%;
+
+form button {
+  flex-basis: 30%;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
 }
-.outerDiv{
-  width: 1170px;
-  margin: auto;
+
+form button:hover {
+  background: #008ba3;
 }
-.outerDiv ul{
-  margin: 0px;
-  margin-top: 50px;
-  padding: 0px;
+
+/* Todo List container */
+.outerDiv {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+/* List styling */
+.outerDiv ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
-.outerDiv ul li{
+
+.outerDiv ul li {
   color: white;
+  background-color: #222;
   padding: 15px;
-  font-size: 20px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 10px;
   position: relative;
   text-align: left;
-  background-color: black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.outerDiv ul li span{
-  right: 20px;
+
+/* Delete button (X) */
+.outerDiv ul li span {
+  color: red;
+  font-weight: bold;
   cursor: pointer;
-  position: absolute;
+  transition: 0.3s;
+  padding: 5px;
+}
+
+.outerDiv ul li span:hover {
+  color: darkred;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+  }
+
+  form {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  form input {
+    width: 100%;
+  }
+
+  form button {
+    width: 100%;
+  }
 }
