@@ -24,7 +24,8 @@ function App() {
   })
   return (
     <div className="App">
-      <h1> ToDo List</h1>
+      <div class = "card">
+      <h1 class = "name"> ToDo List</h1>
       <form onSubmit = {saveToDoList}>
         <input type = 'text' name = 'toname'/>  <button>Save</button>
       </form>
@@ -32,6 +33,7 @@ function App() {
       <ul>
         {list}
       </ul>
+      </div>
       </div>
     </div>
   );
